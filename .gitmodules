@@ -1,0 +1,6 @@
+[submodule "packages/centered-cursor-mode.el"]
+	path = packages/centered-cursor-mode.el
+	url = https://github.com/andre-r/centered-cursor-mode.el.git
+[submodule "packages/emacs-centered-point"]
+	path = packages/emacs-centered-point
+	url = git@github.com:jmercouris/emacs-centered-point.git
