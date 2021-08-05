@@ -31,6 +31,7 @@
                                (load "~/emacs-config/workspace.el")
                                (load "~/emacs-config/windowmanagement.el")
                                (load "~/emacs-config/ui.el")
+                               (load "~/emacs-config/flycheck.el")
                                (load "~/emacs-config/packages/centered-cursor-mode.el/centered-cursor-mode.el")))
 
 (provide '.emacs)
