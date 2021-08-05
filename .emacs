@@ -23,6 +23,7 @@
                                (load "~/emacs-config/editing.el")
                                (load "~/emacs-config/magit.el")
                                (load "~/emacs-config/clojure.el")
+                               (load "~/emacs-config/typescript.el")
                                (load "~/emacs-config/keybindings.el")
                                (load "~/emacs-config/commands.el")
                                (load "~/emacs-config/ido.el")
