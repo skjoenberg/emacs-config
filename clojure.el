@@ -29,7 +29,8 @@
     (as-> 'defun))
   :init
   (setq clojure-indent-style 'align-arguments
-        clojure-align-forms-automatically t))
+        ;;clojure-align-forms-automatically t
+        ))
 
 (use-package flycheck
   :ensure t)

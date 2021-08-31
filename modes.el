@@ -60,3 +60,10 @@
 
 ;; Global centered cursor
 (centered-point-mode)
+
+(use-package diminish :ensure t :demand t)
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1)
+  :diminish editorconfig-mode)

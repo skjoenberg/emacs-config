@@ -53,21 +53,21 @@
 (advice-add 'flycheck-checker-get
             :around 'my-flycheck-local-checker-get)
 
-(add-hook 'lsp-managed-mode-hook
-          (lambda ()
-            (when (derived-mode-p 'clojure-mode)
-              (setq my-flycheck-local-cache '((next-checkers . (clojure-cider-kibit)))))))
+;;(add-hook 'lsp-managed-mode-hook
+;;          (lambda ()
+;;            (when (derived-mode-p 'clojure-mode)
+;;              (setq my-flycheck-local-cache '((next-checkers . (clojure-cider-kibit)))))))
 
 (use-package keytar
   :ensure t
   :config
   (keytar-install))
 
-(use-package lsp-grammarly
-  :ensure t
-  :hook (text-mode . (lambda ()
-                       (require 'lsp-grammarly)
-                       (lsp))))  ; or lsp-deferred
+;;(use-package lsp-grammarly
+;;  :ensure t
+;;  :hook (text-mode . (lambda ()
+;;                       (require 'lsp-grammarly)
+;;                       (lsp))))  ; or lsp-deferred
 
 ;; if you are ivy user
 ;(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
