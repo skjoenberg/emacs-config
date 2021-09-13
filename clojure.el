@@ -101,11 +101,6 @@
 (use-package rainbow-delimiters-mode
   :hook clojure-mode)
 
-(use-package evil-cleverparens
-  :ensure t)
-
-(use-package evil-cleverparens-mode
-  :hook clojure-mode)
 
 (use-package aggressive-indent
   :ensure t)
