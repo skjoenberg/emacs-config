@@ -15,22 +15,23 @@
 (use-package clojure-mode
   :ensure t
   :config
-  (define-clojure-indent
-    (with-in-str 1)
-    (defroutes 'defun)
-    (GET 2)
-    (POST 2)
-    (PUT 2)
-    (DELETE 2)
-    (HEAD 2)
-    (ANY 2)
-    (context 2)
-    (cond-> 'defun)
-    (as-> 'defun))
-  :init
-  (setq clojure-indent-style 'align-arguments
-        ;;clojure-align-forms-automatically t
-        ))
+  (add-hook 'before-save-hook 'clojure-sort-ns t t)
+  ;(define-clojure-indent
+  ;  (with-in-str 1)
+  ;  (defroutes 'defun)
+  ;  (GET 2)
+  ;  (POST 2)
+  ;  (PUT 2)
+  ;  (DELETE 2)
+  ;  (HEAD 2)
+  ;  (context 2)
+  ;  (cond-> 'defun)
+  ;  (as-> 'defun))
+  ;:init
+  ;(setq clojure-indent-style 'align-arguments
+  ;      ;;clojure-align-forms-automatically t
+  ;      )
+  )
 
 (use-package flycheck
   :ensure t)
@@ -66,7 +67,7 @@
   :config
   (flycheck-clojure-setup)
   (setq-default flycheck-disabled-checkers '(clojure-cider-eastwood clojure-cider-typed))
-  (add-hook 'before-save-hook 'cider-format-buffer t t)
+  ;;(add-hook 'before-save-hook 'cider-format-buffer t t)
   :after clojure-mode) ;; run setup *after* cider load
 
 (use-package flycheck-pos-tip
@@ -92,6 +93,7 @@
                                     (t (not (sp-point-in-string-or-comment)))))))
   :bind (("C-M-." . sp-wrap-round)
          ("C-M->" . sp-wrap-square)
+         ("C-M-," . sp-wrap-curly)
          ("s-h"   . sp-backward-slurp-sexp)
          ("s-l"   . sp-forward-slurp-sexp)))
 
