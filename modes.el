@@ -52,8 +52,11 @@
 (show-paren-mode t)
 
 ;; Yasnippet
-(require 'yasnippet) ;; not yasnippet-bundle
-(yas-global-mode 1)
+(use-package yasnippet ;; not yasnippet-bundle
+  :ensure t
+  :config
+  (yas-global-mode 1)) 
+
 
 ;; Tramp - Bruges til sudo
 (require 'tramp)
@@ -67,3 +70,4 @@
   :config
   (editorconfig-mode 1)
   :diminish editorconfig-mode)
+

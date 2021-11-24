@@ -10,7 +10,12 @@
 ;; Enable syntax highlighting
 (global-font-lock-mode t)
 
-;; Font: Inconsolate
+;; Font: Fira code
+(use-package fira-code-mode
+  :ensure t
+  :custom (fira-code-mode-disabled-ligatures '("[]" "#{" "#(" "#_" "#_(" "x")) ;; List of ligatures to turn off
+  :hook prog-mode)
+
 (set-face-attribute 'default nil :family "Fira Code" :height 180)
 
 (prefer-coding-system 'utf-8)

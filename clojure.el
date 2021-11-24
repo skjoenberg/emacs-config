@@ -126,3 +126,9 @@
 ;  :config
 ;  (clj-refactor-mode t)
 ;  :hook clojure-mode)
+
+(add-hook 'clojure-mode-hook
+          (lambda () (add-hook 'before-save-hook 'clojure-sort-ns nil 'local)))
+
+(provide 'clojure)
+;;; clojure.el ends here

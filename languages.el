@@ -2,25 +2,25 @@
 (setq-default c-basic-offset 4)
 
 ;; Haskell
-(require 'haskell-mode)
+;(require 'haskell-mode)
 ;(require 'haskell-interactive-mode)
-(require 'haskell-process)
+;(require 'haskell-process)
 
 ;(setq flycheck-checker 'haskell-hlint)
 ;(add-hook 'haskell-mode-hook 'flycheck-mode)
 ;(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
-(add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
-
-;;(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-(add-hook 'haskell-mode-hook 'turn-on-hi2)
-
-(custom-set-variables
- '(haskell-tags-on-save t))
+;(add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
+;
+;;;(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+;(add-hook 'haskell-mode-hook 'turn-on-hi2)
+;
+;(custom-set-variables
+; '(haskell-tags-on-save t))
 
 ;; Python
 (add-hook 'python-mode-hook
-  (lambda () (setq python-indent-offset 4)))
+  (lambda () (setq python-indent-offset 2)))
 (setq py-python-command "python3")
 
 (setq jedi:environment-virtualenv
